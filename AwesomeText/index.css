@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #487eb0;
+}
+
+.middle{
+    position: absolute;
+    top : 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /*플렉스 요소의 수평 방향 정렬 방식을 설정*/
+}
+
+.text{
+    color : #fff;
+    font-size: 70px;
+    font-family: "montserrat";
+    font-weight: 900; /*글씨 굵기*/
+    cursor: pointer;   
+}
+
+.hidden{
+    max-width: 0;
+    opacity: 0;
+    transition: 0.5s ease-in;
+}
+
+.text:hover .hidden{ 
+    opacity: 1;
+    max-width: 1em;
+    /*em : 상대적인 크기*/
+}
+/*, 붙이면 안됨!!!!!!!!!!!!!!!!!!!!!!!!!!
+  text:hover일경우 그 중에서도 hidden이라는 의미!*/
