@@ -1,0 +1,65 @@
+body{
+    margin : 0;
+    padding : 0;
+    background : #34495e;
+    height: 100vh;
+    display: flex; /*흐르듯이 배치*/
+    align-items: center;
+    justify-content: center; /*진행흐름 설정. flex여서 설정가능*/
+    font-family: 'montserrat', sans-serif;
+}
+
+.loading{
+    width : 200px;
+    height: 200px;
+    box-sizing: border-box;
+    /*박스크기를 어떤 기준으로 계산할 것인지. 여기서는 테두리 기준*/
+    border-radius: 50%;
+    border-top: 10px solid #e74c3c;
+    /*solid는 일반적인 라인테두리*/
+    position: relative;
+    animation: a1 2s linear infinite;
+}
+
+.loading::before, .loading::after{
+    content: ' ';
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left : 0;
+    top : -10px;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.loading::before{
+    border-top: 10px solid #e67e22;
+    transform: rotate(120deg);
+}
+
+.loading::after{
+    border-top: 10px solid #3498db;
+    transform: rotate(240deg);
+}
+
+.loading span{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    line-height: 200px;
+    animation: a2 2s linear infinite;
+}
+
+@keyframes a1{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes a2{
+    to{
+        transform: rotate(-360deg);
+    }
+}
