@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha256-PZLhE6wwMbg4AB3d35ZdBF9HD/dI/y4RazA3iRDurss=" crossorigin="anonymous" />
+    <!-- J 쿼리 사용!! -->
+    <meta name = "viewpoint" content = "width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="gallery-section">
+        <div class="inner-width">
+            <h1>My Gallery</h1>
+            <div class="border"></div>
+        <div class="gallery">
+            <a href="img/1.png" class="image">
+                <img src="img/1.png" alt="">
+            </a>
+            <a href="img/2.png" class="image">
+                <img src="img/2.png" alt="">
+            </a>
+            <a href="img/3.png" class="image">
+                <img src="img/3.png" alt="">
+            </a>
+            <a href="img/4.png" class="image">
+                <img src="img/4.png" alt="">
+            </a>
+            <a href="img/5.png" class="image">
+                <img src="img/5.png" alt="">
+            </a>
+            <a href="img/6.png" class="image">
+                <img src="img/6.png" alt="">
+            </a>
+            <a href="img/7.png" class="image">
+                <img src="img/7.png" alt="">
+            </a>
+            <a href="img/8.png" class="image">
+                <img src="img/8.png" alt="">
+            </a>
+        </div>
+        </div>
+    </div>
+    
+    <script>
+        // 팜업 초기화 코드
+        $(".gallery").magnificPopup({
+            delegate : 'a',  // child items selector, by clicking on it popup will open
+            type : 'image',
+            gellery:{
+                enabled:true
+            } // 한 컨터이너에 요소목록을 팜업으로 만드는 경우
+        });
+    </script>
+</body>
+</html>
