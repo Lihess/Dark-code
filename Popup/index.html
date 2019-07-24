@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        button{
+            color: white;
+            background: #456895;
+            margin: 10px;
+            padding: 5px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .popup{
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19) 0 6px 6px rgba(0,0,0,0.23);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .popup_overlay{
+            background: gray;
+            opacity: 0.5;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .popup_content{
+            background-color: white;
+            padding: 50px 100px;
+            text-align: center;
+            position: relative;
+            border-radius: 10px;
+            width: 200px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id = "open"> Pou UP !</button>
+    <div class="popup hidden">
+        <div class="popup_overlay"></div>
+        <div class="popup_content">
+            <h1> Hello World! </h1>
+            <button> x </button>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.getElementById("open");
+        const pop = document.querySelector(".popup");
+        const overlay = pop.querySelector(".popup_overlay");
+        const cbtn = pop.querySelector("button");
+
+        const openPop = () => {
+            pop.classList.remove("hidden");
+        }
+        const closePop = () => {
+            pop.classList.add("hidden");
+        }
+
+        btn.addEventListener("click", openPop);
+        pop.addEventListener("click", closePop);
+        overlay.addEventListener("click", closePop);
+    </script>
+</body>
+</html>
