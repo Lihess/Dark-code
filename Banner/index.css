@@ -1,0 +1,42 @@
+@import "animate.css";
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.banner{
+    background: url(15.jpg) no-repeat;
+    background-size: cover; /*배경에 이미지가 덥도록, 가능한 크게 표시해서 일부는 잘릴수도.*/
+    width: 100%;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    text-transform: sans-serif;
+    padding: 30px;
+}
+
+.banner h1{
+    font-size: 100px;
+    margin: 0;
+}
+
+.banner h2{
+    margin:0 0 20px 0;
+    font-size: 36px;
+}
+
+.banner a{
+    display: inline-block;
+    padding: 10px 22px;
+    background: white;
+    color : #333;
+    font-size: 22px;
+    text-decoration: none; /* 선으로 텍스트 꾸미기 */
+    transition: 0.3s;
+}
+
+.banner a:hover{
+    background: none;
+    color: white;
+}
