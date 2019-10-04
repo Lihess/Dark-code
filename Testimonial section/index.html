@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="testimonial-section">
+        <div class="inner-width">
+            <h1>What Our clients Say</h1>
+            <div class="testimonial-pics">
+                <img src="./img/1.png" alt="test-1" class = "active">
+                <img src="./img/2.png" alt="test-2">
+                <img src="./img/3.png" alt="test-3">
+                <img src="./img/5.png" alt="test-4">
+            </div>
+
+            <div class = 'testimonial-contents'>
+                <div class="testimonial active" id = "test-1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequatur et adipisci ut, impedit cumque, similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+                    <span class="description">Emy / Developer</span>
+                </div>
+                <div class="testimonial" id = "test-2">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elimet, consectetur adipisicing eli t. Ab consequatur et adipisci ut, impedit cumque, similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+                    <span class="description">Carla / Developer</span>
+                </div>
+                <div class="testimonial" id = "test-3">
+                    <p>Lorem similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+                    <span class="description">Thomas / Developer</span>
+                </div>
+                <div class="testimonial" id = "test-4">
+                    <p>Lorem ipsum dolorng elit. Ab consequatur et adipisci ut, impedit cumque, similique, eum tenetur, numquam eligendi aliquid. Nulla sit, cupiditate corporis labore, modi natus officiis asperiores!</p>
+                    <span class="description">Monica / Developer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type = "text/javascript">
+        $('.testimonial-pics img').click(function(){
+            $('.testimonial-pics img').removeClass("active");
+            $(this).addClass("active");
+
+            $(".testimonial").removeClass('active');
+            $("#" + $(this).attr("alt")).addClass("active");
+        });
+    </script>
+</body>
+</html>
